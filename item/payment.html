@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles [CSS]/styleshf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        /* Navigation bar styles */
+        .navbar {
+            list-style: none;
+            padding: 0;
+            background-color: #333;
+            display: flex;
+            justify-content: space-between; /* Adjusted alignment */
+            align-items: center; /* Adjusted alignment */
+            padding: 10px 20px; /* Added padding */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #logo img {
+            width: 35px;
+            height: 35px;
+        }
+
+        .navbar-login {
+            color: white;
+        }
+
+        /* Payment container styles */
+        .payment-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* Payment form styles */
+        .payment-form {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .payment-label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .payment-input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .payment-button {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around; /* Adjusted alignment */
+            align-items: flex-start; /* Adjusted alignment */
+            flex-wrap: wrap;
+        }
+
+        .footer-col {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-copy {
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="GameStore.html">Games</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Feedback</a></li>
+        <li id="logo"><a href="#"><img src="resources(src)/images/profile.png" width="35px" height="35px"></a></li>
+        <li class="navbar-login"><p><strong><a href="#">Login</a> / <a href="#">Register</a></strong></p></li>
+    </ul>
+
+    <div class="payment-container">
+        <h2>Enter Payment Details</h2>
+        <form class="payment-form" id="paymentForm">
+            <label class="payment-label" for="cardNumber">Card Number:</label>
+            <input class="payment-input" type="text" id="cardNumber" name="cardNumber" required>
+
+            <label class="payment-label" for="cardHolderName">Cardholder Name:</label>
+            <input class="payment-input" type="text" id="cardHolderName" name="cardHolderName" required>
+
+            <label class="payment-label" for="expiryDate">Expiry Date (MM/YY):</label>
+            <input class="payment-input" type="text" id="expiryDate" name="expiryDate" required>
+
+            <label class="payment-label" for="cvv">CVV:</label>
+            <input class="payment-input" type="text" id="cvv" name="cvv" required>
+
+            <label class="payment-label" for="billingAddress">Billing Address:</label>
+            <input class="payment-input" type="text" id="billingAddress" name="billingAddress" required>
+
+            <label class="payment-label" for="email">Email Address:</label>
+            <input class="payment-input" type="email" id="email" name="email" required>
+
+            <button class="payment-button" type="button" id="payNowButton">Pay Now</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#">pixelpulse@gaming.com</a></li>
+                    <li><a href="#">Tel : 0112-234-55</a></li>
+                    <li><a href="#">New York, USA</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>License &amp; Terms</h4>
+                <ul>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://lk.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            </div>
+            <p class="footer-copy">&copy; 2023 PixelPulse. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.getElementById('payNowButton').addEventListener('click', function() {
+            // Perform payment processing here (you can add your logic)
+
+            // Display a payment success alert
+            alert('Payment was successful!');
+
+            // Navigate to the "GameStore.html" page
+           
+
+            window.location.href = 'GameStore.html';
+        });
+    </script>
+</body>
+</html>

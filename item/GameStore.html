@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="styles [CSS]/styleshf.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User View Cart Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+        }
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .cart-item, .recommendation {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            align-items: center;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .recommendation-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .recommendation {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .recommendation img {
+            width: 150px;
+            margin-bottom: 10px;
+        }
+        .recommendation-button {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            padding: 0.5rem 1rem;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+        .pay-now-button {
+            background-color: green;
+            color: white;
+            border: none;
+        }
+        .remove-button {
+            background-color: red;
+            color: white;
+            border: none;
+        }
+		.add-to-cart-button {
+			background-color:#207DDF ;
+			color: white; 
+		}
+		.pay-all-button{
+			background-color: green;
+            color: white;
+            border: none;
+		}
+    </style>
+</head>
+
+<body>
+	<ul class="navbar">
+
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Games</a></li>
+	<li><a href="#">About us</a></li>
+	<li><a href="#">Support</a></li>
+	<li><a href="#">FAQ</a></li>
+	<li><a href="#">Feedback</a></li>
+	<li id="logo"><a href="#"> <img src="resources(src)/images/profile.png" width="35px" height="35px"></a></li>
+		<br><p class="test1"><strong><a href="#">Login</a> / <a href="#">Register</a></strong></p>
+	</ul>
+		
+    
+
+    <section>
+        <h2>My Cart</h2>
+        <div id="cart">
+            <!-- Cart items will be added here -->
+        </div>
+		<div class="pay-all-button-container">
+			<button class="pay-all-button" onclick="payAllItems()">Pay All</button>
+		</div>
+		
+    </section>
+
+    <section>
+        <h2>You might also like</h2>
+        <!-- Display 10 games in 4 rows with 3 games in each row -->
+        <div class="recommendation-row">
+            <!-- First Row -->
+            <div class="recommendation">
+                <img src="resources(src)/images/games/game1.jpg" alt="Game Image" width="200">
+                <span>Party Animals</span>
+                <span>$23</span>
+                <button class="add-to-cart-button" onclick="addToCart('Party Animals', '$23', 'resources(src)/images/games/game1icon.png')">Add to Cart</button>
+            </div>
+            <div class="recommendation">
+                <img src="resources(src)/images/games/game2.jpg" alt="Game Image" width="150">
+                <span>Mario Party9</span>
+                <span>$30</span>
+                <button class="add-to-cart-button" onclick="addToCart('Mario Party9', '$30', 'resources(src)/images/games/game2icon.png')">Add to Cart</button>
+            </div>
+            <div class="recommendation">
+                <img src="resources(src)/images/games/game3.jpg" alt="Game Image" width="150">
+                <span>Farm Frenzy 4</span>
+                <span>$28</span>
+                <button class="add-to-cart-button" onclick="addToCart('Farm Frenzy 4', '$28', 'resources(src)/images/games/game3icon.png')">Add to Cart</button>
+            </div>
+			
+			 <div class="recommendation">
+                <img src="resources(src)/images/games/game4.jpg" alt="Game Image" width="150">
+                <span>Gang Beasts</span>
+                <span>$25</span>
+                <button class="add-to-cart-button" onclick="addToCart('Gang Beasts', '$25', 'resources(src)/images/games/game4icon.png')">Add to Cart</button>
+            </div>
+			
+			 <div class="recommendation">
+                <img src="resources(src)/images/games/game5.jpg" alt="Game Image" width="150">
+                <span>Pokemon</span>
+                <span>$20</span>
+                <button class="add-to-cart-button" onclick="addToCart('Pokemon', '$20', 'resources(src)/images/games/game5icon.png')">Add to Cart</button>
+            </div>
+			
+        </div>
+        <div class="recommendation-row">
+            <!-- Second Row -->
+                 
+            <div class="recommendation">
+                <img src="resources(src)/images/games/game6.jpg" alt="Game Image" width="150">
+                <span>The Sims 4</span>
+                <span>$35</span>
+                <button class="add-to-cart-button" onclick="addToCart('The Sims 4', '$35', 'resources(src)/images/games/game6icon.png')">Add to Cart</button>
+            </div>
+			
+			<div class="recommendation">
+                <img src="resources(src)/images/games/game7.jpg" alt="Game Image" width="150">
+                <span>Plants vs Zombies</span>
+                <span>$22</span>
+                <button class="add-to-cart-button" onclick="addToCart('Plants vs Zombies', '$22', 'resources(src)/images/games/game7icon.png')">Add to Cart</button>
+            </div>
+			
+			 <div class="recommendation">
+                <img src="resources(src)/images/games/game8.jpg" alt="Game Image" width="150">
+                <span>Minecraft</span>
+                <span>$27</span>
+                <button class="add-to-cart-button" onclick="addToCart('Minecraft', '$27', 'resources(src)/images/games/game8icon.png')">Add to Cart</button>
+            </div>
+            <div class="recommendation">
+                <img src="resources(src)/images/games/game9.jpg" alt="Game Image" width="150">
+                <span>Brawlhalla</span>
+                <span>$24</span>
+                <button class="add-to-cart-button" onclick="addToCart('Brawlhalla', '$24', 'resources(src)/images/games/game9icon.png')">Add to Cart</button>
+            </div>
+			
+			<div class="recommendation">
+                <img src="resources(src)/images/games/game10.jpg" alt="Game Image" width="150">
+                <span>Among US</span>
+                <span>$32</span>
+                <button class="add-to-cart-button" onclick="addToCart('Among US', '$32', 'resources(src)/images/games/game10icon.png')">Add to Cart</button>
+            </div>
+			
+        </div>
+       
+       
+    </section>
+
+    <script>
+        function addToCart(gameName, gamePrice, gameImage) {
+            // Create a new cart item
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `
+                <img src="${gameImage}" alt="Game Image" width="50">
+                <span>${gameName}</span>
+                <span>${gamePrice}</span>
+                <div>
+                    <button class="pay-now-button" onclick="navigateToPaymentDetails()">Pay Now</button>
+                     <button class="remove-button" onclick="removeItem(this)">Remove</button>
+					
+                </div>
+            `;
+
+            // Add the cart item to the cart section
+            const cartSection = document.getElementById('cart');
+            cartSection.appendChild(cartItem);
+        }
+
+        function removeItem(buttonElement) {
+            buttonElement.closest('.cart-item').remove();
+        }
+		
+		  function navigateToPaymentDetails() {
+            window.location.href = 'payment.html';
+        }
+		
+		function payAllItems() {
+			window.location.href = 'payment.html';
+		}
+    </script>
+	<footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>contact</h4>
+  	 			<ul>
+ 				  <li><a href="#">pixelpulse@gaming.com&nbsp;</a></li>
+  	 				<li><a href="#">Tel : 0112-234-55&nbsp;</a></li>
+  	 				<li><a href="#">Newyork, USA</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>License &amp; Terms&nbsp;</h4>
+  	 			<ul>
+ 				  <li><a href="#">Privacy policy</a></li>
+  	 				<li><a href="#">Terms of use</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>Company</h4>
+  	 			<ul>
+ 				  <li><a href="#">about us</a></li>
+  	 				<li><a href="#">contact us</a></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+  	 				<a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
+  	 				<a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+  	 				<a href="https://lk.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F"><i class="fab fa-linkedin-in"></i></a>
+					
+  	 			</div>
+  	 		</div>
+  	 	</div>
+  	 </div>
+	 <p class="copy1">
+					<br><br>&copy; 2023 PixelPulse. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
